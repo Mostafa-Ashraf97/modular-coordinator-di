@@ -20,8 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         navigationController.setNavigationBarHidden(true, animated: false)
         
+        let router = NavigationRouter(navigationController: navigationController)
         let appCoordinatorFactory = Container.shared.appCoordinatorFactory()
-        let coordinator = appCoordinatorFactory.makeAppCoordinator(navigationController: navigationController)
+        let coordinator = appCoordinatorFactory.makeAppCoordinator(router: router)
         self.coordinator = coordinator
         
         coordinator.start()

@@ -6,7 +6,7 @@
 import UIKit
 
 protocol SettingsCoordinatorFactoryProtocol {
-    func makeSettingsCoordinator(navigationController: UINavigationController) -> SettingsFlowCoordinatorProtocol
+    func makeSettingsCoordinator(router: Router) -> SettingsFlowCoordinatorProtocol
 }
 
 final class SettingsCoordinatorFactory: SettingsCoordinatorFactoryProtocol {
@@ -22,9 +22,9 @@ final class SettingsCoordinatorFactory: SettingsCoordinatorFactoryProtocol {
         self.notificationSettingsFactory = notificationSettingsFactory
     }
     
-    func makeSettingsCoordinator(navigationController: UINavigationController) -> SettingsFlowCoordinatorProtocol {
+    func makeSettingsCoordinator(router: Router) -> SettingsFlowCoordinatorProtocol {
         return SettingsCoordinator(
-            navigationController: navigationController,
+            router: router,
             settingsFactory: settingsFactory,
             notificationSettingsFactory: notificationSettingsFactory
         )

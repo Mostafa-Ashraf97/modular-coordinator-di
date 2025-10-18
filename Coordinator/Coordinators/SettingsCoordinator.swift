@@ -13,18 +13,18 @@ final class SettingsCoordinator: SettingsFlowCoordinatorProtocol {
     private(set) weak var rootViewController: UIViewController?
     
     // MARK: - Coordinator
-    var navigationController: UINavigationController
+    let router: Router
     
     // MARK: - Dependencies
     private let settingsFactory: SettingsViewControllerFactoryProtocol
     private let notificationSettingsFactory: NotificationSettingsViewControllerFactoryProtocol
     
     init(
-        navigationController: UINavigationController,
+        router: Router,
         settingsFactory: SettingsViewControllerFactoryProtocol,
         notificationSettingsFactory: NotificationSettingsViewControllerFactoryProtocol
     ) {
-        self.navigationController = navigationController
+        self.router = router
         self.settingsFactory = settingsFactory
         self.notificationSettingsFactory = notificationSettingsFactory
     }
@@ -32,7 +32,7 @@ final class SettingsCoordinator: SettingsFlowCoordinatorProtocol {
     func start() {
         let settingsVC = settingsFactory.makeSettingsViewController(coordinator: self)
         rootViewController = settingsVC
-        navigationController.pushViewController(settingsVC, animated: true)
+        router.push(settingsVC, animated: true)
     }
 }
 
@@ -41,7 +41,7 @@ extension SettingsCoordinator: SettingsCoordinatorActions {
     
     func navigateToNotificationSettings() {
         let notificationVC = notificationSettingsFactory.makeNotificationSettingsViewController(coordinator: self)
-        navigationController.pushViewController(notificationVC, animated: true)
+        router.push(notificationVC, animated: true)
     }
 }
 

@@ -6,7 +6,7 @@
 import Foundation
 import UIKit
 
-final class HomepageCoordinator: NSObject, HomeFlowCoordinatorProtocol {
+final class HomepageCoordinator: HomeFlowCoordinatorProtocol {
     // MARK: - ChildCoordinator
     weak var finishDelegate: CoordinatorFinishDelegate?
     private(set) weak var rootViewController: UIViewController?
@@ -15,7 +15,7 @@ final class HomepageCoordinator: NSObject, HomeFlowCoordinatorProtocol {
     var childCoordinators = [ChildCoordinator]()
 
     // MARK: - Coordinator
-    var navigationController: UINavigationController
+    let router: Router
 
     // MARK: - Dependencies
     private let homepageFactory: HomepageViewControllerFactoryProtocol
@@ -23,52 +23,39 @@ final class HomepageCoordinator: NSObject, HomeFlowCoordinatorProtocol {
     private let settingsCoordinatorFactory: SettingsCoordinatorFactoryProtocol
 
     init(
-        navigationController: UINavigationController,
+        router: Router,
         homepageFactory: HomepageViewControllerFactoryProtocol,
         profileCoordinatorFactory: ProfileCoordinatorFactoryProtocol,
         settingsCoordinatorFactory: SettingsCoordinatorFactoryProtocol
     ) {
-        self.navigationController = navigationController
+        self.router = router
         self.homepageFactory = homepageFactory
         self.profileCoordinatorFactory = profileCoordinatorFactory
         self.settingsCoordinatorFactory = settingsCoordinatorFactory
-        super.init()
     }
 
     func start() {
-        navigationController.delegate = self
+        router.delegate = self
         let homepageVC = homepageFactory.makeHomepageViewController(coordinator: self)
         rootViewController = homepageVC
-        navigationController.pushViewController(homepageVC, animated: false)
-    }
-    
-    deinit {
-        if navigationController.delegate === self {
-            navigationController.delegate = nil
-        }
+        router.push(homepageVC, animated: false)
     }
 }
 
 // MARK: - HomepageCoordinatorActions
 extension HomepageCoordinator: HomepageCoordinatorActions {
     func navigateToProfile() {
-        let profileCoordinator = profileCoordinatorFactory.makeProfileCoordinator(
-            navigationController: navigationController
-        )
+        let profileCoordinator = profileCoordinatorFactory.makeProfileCoordinator(router: router)
         profileCoordinator.finishDelegate = self
         addChildCoordinator(profileCoordinator)
         profileCoordinator.start()
     }
 
     func navigateToSettings() {
-        let settingsCoordinator = settingsCoordinatorFactory.makeSettingsCoordinator(
-            navigationController: navigationController
-        )
+        let settingsCoordinator = settingsCoordinatorFactory.makeSettingsCoordinator(router: router)
         settingsCoordinator.finishDelegate = self
         addChildCoordinator(settingsCoordinator)
         settingsCoordinator.start()
     }
 }
 
-// MARK: - UINavigationControllerDelegate
-extension HomepageCoordinator: UINavigationControllerDelegate {}

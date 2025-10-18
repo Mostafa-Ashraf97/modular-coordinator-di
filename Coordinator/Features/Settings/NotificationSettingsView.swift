@@ -40,7 +40,7 @@ struct NotificationSettingsView<ViewModel: NotificationSettingsViewModelProtocol
             }
             .padding(.top, 100)
         }
-        .navigationBarHidden(true)
+        .navigationBarHidden(false)
     }
 }
 

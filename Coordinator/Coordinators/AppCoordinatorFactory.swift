@@ -6,7 +6,7 @@
 import UIKit
 
 protocol AppCoordinatorFactoryProtocol {
-    func makeAppCoordinator(navigationController: UINavigationController) -> AppCoordinatorProtocol
+    func makeAppCoordinator(router: Router) -> AppCoordinatorProtocol
 }
 
 final class AppCoordinatorFactory: AppCoordinatorFactoryProtocol {
@@ -25,9 +25,9 @@ final class AppCoordinatorFactory: AppCoordinatorFactoryProtocol {
         self.homepageFactory = homepageFactory
     }
     
-    func makeAppCoordinator(navigationController: UINavigationController) -> AppCoordinatorProtocol {
+    func makeAppCoordinator(router: Router) -> AppCoordinatorProtocol {
         return AppCoordinator(
-            navigationController: navigationController,
+            router: router,
             splashFactory: splashFactory,
             authCoordinatorFactory: authFactory,
             homepageCoordinatorFactory: homepageFactory

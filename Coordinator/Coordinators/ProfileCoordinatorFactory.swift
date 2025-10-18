@@ -6,7 +6,7 @@
 import UIKit
 
 protocol ProfileCoordinatorFactoryProtocol {
-    func makeProfileCoordinator(navigationController: UINavigationController) -> ProfileFlowCoordinatorProtocol
+    func makeProfileCoordinator(router: Router) -> ProfileFlowCoordinatorProtocol
 }
 
 final class ProfileCoordinatorFactory: ProfileCoordinatorFactoryProtocol {
@@ -22,9 +22,9 @@ final class ProfileCoordinatorFactory: ProfileCoordinatorFactoryProtocol {
         self.profileDetailsFactory = profileDetailsFactory
     }
     
-    func makeProfileCoordinator(navigationController: UINavigationController) -> ProfileFlowCoordinatorProtocol {
+    func makeProfileCoordinator(router: Router) -> ProfileFlowCoordinatorProtocol {
         return ProfileCoordinator(
-            navigationController: navigationController,
+            router: router,
             profileFactory: profileFactory,
             profileDetailsFactory: profileDetailsFactory
         )

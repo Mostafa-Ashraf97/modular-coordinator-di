@@ -13,18 +13,18 @@ final class ProfileCoordinator: ProfileFlowCoordinatorProtocol {
     private(set) weak var rootViewController: UIViewController?
     
     // MARK: - Coordinator
-    var navigationController: UINavigationController
+    let router: Router
     
     // MARK: - Dependencies
     private let profileFactory: ProfileViewControllerFactoryProtocol
     private let profileDetailsFactory: ProfileDetailsViewControllerFactoryProtocol
     
     init(
-        navigationController: UINavigationController,
+        router: Router,
         profileFactory: ProfileViewControllerFactoryProtocol,
         profileDetailsFactory: ProfileDetailsViewControllerFactoryProtocol
     ) {
-        self.navigationController = navigationController
+        self.router = router
         self.profileFactory = profileFactory
         self.profileDetailsFactory = profileDetailsFactory
     }
@@ -32,7 +32,7 @@ final class ProfileCoordinator: ProfileFlowCoordinatorProtocol {
     func start() {
         let profileVC = profileFactory.makeProfileViewController(coordinator: self)
         rootViewController = profileVC
-        navigationController.pushViewController(profileVC, animated: true)
+        router.push(profileVC, animated: true)
     }
 }
 
@@ -41,6 +41,6 @@ extension ProfileCoordinator: ProfileCoordinatorActions {
     
     func navigateToProfileDetails() {
         let detailsVC = profileDetailsFactory.makeProfileDetailsViewController(coordinator: self)
-        navigationController.pushViewController(detailsVC, animated: true)
+        router.push(detailsVC, animated: true)
     }
 }

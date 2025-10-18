@@ -6,7 +6,7 @@
 import UIKit
 
 protocol AuthCoordinatorFactoryProtocol {
-    func makeAuthCoordinator(navigationController: UINavigationController) -> AuthFlowCoordinatorProtocol
+    func makeAuthCoordinator(router: Router) -> AuthFlowCoordinatorProtocol
 }
 
 final class AuthCoordinatorFactory: AuthCoordinatorFactoryProtocol {
@@ -25,9 +25,9 @@ final class AuthCoordinatorFactory: AuthCoordinatorFactoryProtocol {
         self.registrationFactory = registrationFactory
     }
     
-    func makeAuthCoordinator(navigationController: UINavigationController) -> AuthFlowCoordinatorProtocol {
+    func makeAuthCoordinator(router: Router) -> AuthFlowCoordinatorProtocol {
         return AuthCoordinator(
-            navigationController: navigationController,
+            router: router,
             loginFactory: loginFactory,
             forgotPasswordFactory: forgotPasswordFactory,
             registrationFactory: registrationFactory

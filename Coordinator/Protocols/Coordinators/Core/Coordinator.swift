@@ -3,10 +3,9 @@
 //  CleanCoordinatorApp
 //
 
-import UIKit
 
 protocol Coordinator: AnyObject {
-    var navigationController: UINavigationController { get set }
+    var router: Router { get }
     func start()
 }
 
