@@ -6,7 +6,7 @@
 import UIKit
 
 protocol HomepageCoordinatorFactoryProtocol {
-    func makeHomepageCoordinator(navigationController: UINavigationController) -> HomeFlowCoordinatorProtocol
+    func makeHomepageCoordinator(router: Router) -> HomeFlowCoordinatorProtocol
 }
 
 final class HomepageCoordinatorFactory: HomepageCoordinatorFactoryProtocol {
@@ -25,9 +25,9 @@ final class HomepageCoordinatorFactory: HomepageCoordinatorFactoryProtocol {
         self.settingsCoordinatorFactory = settingsCoordinatorFactory
     }
     
-    func makeHomepageCoordinator(navigationController: UINavigationController) -> HomeFlowCoordinatorProtocol {
+    func makeHomepageCoordinator(router: Router) -> HomeFlowCoordinatorProtocol {
         return HomepageCoordinator(
-            navigationController: navigationController,
+            router: router,
             homepageFactory: homepageFactory,
             profileCoordinatorFactory: profileCoordinatorFactory,
             settingsCoordinatorFactory: settingsCoordinatorFactory

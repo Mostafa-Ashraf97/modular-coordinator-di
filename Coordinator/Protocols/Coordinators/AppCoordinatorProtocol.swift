@@ -3,7 +3,9 @@
 //  CleanCoordinatorApp
 //
 
-import Foundation
+import UIKit
 
 /// Protocol for the root app coordinator
-protocol AppCoordinatorProtocol: ParentCoordinator {}
+protocol AppCoordinatorProtocol: ParentCoordinator {
+    func configure(with windowScene: UIWindowScene)
+}

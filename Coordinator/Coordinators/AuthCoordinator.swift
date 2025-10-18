@@ -12,7 +12,7 @@ final class AuthCoordinator: AuthFlowCoordinatorProtocol {
     private(set) weak var rootViewController: UIViewController?
 
     // MARK: - Coordinator
-    var navigationController: UINavigationController
+    let router: Router
 
     // MARK: - AuthFlowCoordinatorProtocol
     var onAuthenticationSuccess: ((User) -> ())?
@@ -23,12 +23,12 @@ final class AuthCoordinator: AuthFlowCoordinatorProtocol {
     private let registrationFactory: RegistrationViewControllerFactoryProtocol
 
     init(
-        navigationController: UINavigationController,
+        router: Router,
         loginFactory: LoginViewControllerFactoryProtocol,
         forgotPasswordFactory: ForgotPasswordViewControllerFactoryProtocol,
         registrationFactory: RegistrationViewControllerFactoryProtocol
     ) {
-        self.navigationController = navigationController
+        self.router = router
         self.loginFactory = loginFactory
         self.forgotPasswordFactory = forgotPasswordFactory
         self.registrationFactory = registrationFactory
@@ -37,7 +37,7 @@ final class AuthCoordinator: AuthFlowCoordinatorProtocol {
     func start() {
         let loginVC = loginFactory.makeLoginViewController(coordinator: self)
         rootViewController = loginVC
-        navigationController.customPushViewController(viewController: loginVC)
+        router.pushWithCustomTransition(loginVC, transition: .fromRight)
     }
 }
 
@@ -50,12 +50,12 @@ extension AuthCoordinator: LoginCoordinatorActions {
 
     func navigateToForgotPassword() {
         let forgotPasswordVC = forgotPasswordFactory.makeForgotPasswordViewController(coordinator: self)
-        navigationController.customPushViewController(viewController: forgotPasswordVC, direction: .fromLeft)
+        router.pushWithCustomTransition(forgotPasswordVC, transition: .fromLeft)
     }
 
     func navigateToRegister() {
         let registerVC = registrationFactory.makeRegistrationViewController(coordinator: self)
-        navigationController.customPushViewController(viewController: registerVC, direction: .fromLeft)
+        router.pushWithCustomTransition(registerVC, transition: .fromLeft)
     }
 }
 
@@ -63,7 +63,7 @@ extension AuthCoordinator: LoginCoordinatorActions {
 extension AuthCoordinator: ForgotPasswordCoordinatorActions {
     func forgotPasswordFinished() {
         let loginVC = loginFactory.makeLoginViewController(coordinator: self)
-        navigationController.customPushViewController(viewController: loginVC, direction: .fromRight)
+        router.pushWithCustomTransition(loginVC, transition: .fromRight)
     }
 }
 

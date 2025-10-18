@@ -6,7 +6,7 @@
 import UIKit
 
 /// Protocol for coordinators that can have child coordinators
-protocol ParentCoordinator: Coordinator, CoordinatorFinishDelegate {
+protocol ParentCoordinator: Coordinator, CoordinatorFinishDelegate, RouterDelegate {
     var childCoordinators: [ChildCoordinator] { get set }
     func addChildCoordinator(_ child: ChildCoordinator?)
     func removeChildCoordinator(_ child: ChildCoordinator?)
@@ -36,28 +36,19 @@ extension ParentCoordinator {
     }
 }
 
-
-// MARK: - UINavigationControllerDelegate Default Implementation
-extension ParentCoordinator where Self: UINavigationControllerDelegate {
+// MARK: - RouterDelegate Default Implementation
+extension ParentCoordinator {
     
-    /// Default implementation for UINavigationControllerDelegate
+    /// Default implementation for RouterDelegate
     /// Automatically cleans up child coordinators when their root view controller is popped
-    func navigationController(_ navigationController: UINavigationController,
-                            didShow viewController: UIViewController,
-                            animated: Bool) {
-        
-        // Get the view controller we're transitioning FROM
-        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from),
-              !navigationController.viewControllers.contains(fromViewController) else {
-            return
-        }
-        
+    func router(_ router: Router, didPopViewController viewController: UIViewController) {
         // Check if any child coordinator's root view controller was popped
         for childCoordinator in childCoordinators {
-            if childCoordinator.rootViewController === fromViewController {
+            if childCoordinator.rootViewController === viewController {
                 coordinatorDidFinish(childCoordinator: childCoordinator)
                 return
             }
         }
     }
 }
+
