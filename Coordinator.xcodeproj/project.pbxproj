@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E3CAE12EA0179F00B849C4 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 00E3CAE02EA0179F00B849C4 /* Factory */; };
+		007C0CFF2EA6CAD200EF2C55 /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0CFE2EA6CAD200EF2C55 /* Authentication */; };
+		007C0D022EA6CADB00EF2C55 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D012EA6CADB00EF2C55 /* Common */; };
+		007C0D052EA6CAE200EF2C55 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D042EA6CAE200EF2C55 /* Home */; };
+		007C0D082EA6CAEB00EF2C55 /* Profile in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D072EA6CAEB00EF2C55 /* Profile */; };
+		007C0D0B2EA6CAF700EF2C55 /* Settings in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D0A2EA6CAF700EF2C55 /* Settings */; };
+		007C0D112EA6CB4D00EF2C55 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D102EA6CB4D00EF2C55 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007C0CE42EA6CA9400EF2C55 /* Authentication */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Authentication; sourceTree = "<group>"; };
+		007C0CE52EA6CA9400EF2C55 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
+		007C0CE62EA6CA9400EF2C55 /* Home */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Home; sourceTree = "<group>"; };
+		007C0CE72EA6CA9400EF2C55 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Profile; sourceTree = "<group>"; };
+		007C0CE82EA6CA9400EF2C55 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Settings; sourceTree = "<group>"; };
 		00E3C9DE2EA0168B00B849C4 /* Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -40,16 +50,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E3CAE12EA0179F00B849C4 /* Factory in Frameworks */,
+				007C0D082EA6CAEB00EF2C55 /* Profile in Frameworks */,
+				007C0D0B2EA6CAF700EF2C55 /* Settings in Frameworks */,
+				007C0D112EA6CB4D00EF2C55 /* Swinject in Frameworks */,
+				007C0CFF2EA6CAD200EF2C55 /* Authentication in Frameworks */,
+				007C0D022EA6CADB00EF2C55 /* Common in Frameworks */,
+				007C0D052EA6CAE200EF2C55 /* Home in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007C0C392EA69EE500EF2C55 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				007C0CE42EA6CA9400EF2C55 /* Authentication */,
+				007C0CE52EA6CA9400EF2C55 /* Common */,
+				007C0CE62EA6CA9400EF2C55 /* Home */,
+				007C0CE72EA6CA9400EF2C55 /* Profile */,
+				007C0CE82EA6CA9400EF2C55 /* Settings */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		00E3C9D52EA0168B00B849C4 = {
 			isa = PBXGroup;
 			children = (
+				007C0C392EA69EE500EF2C55 /* Packages */,
 				00E3C9E02EA0168B00B849C4 /* Coordinator */,
 				00E3C9DF2EA0168B00B849C4 /* Products */,
 			);
@@ -83,7 +111,12 @@
 			);
 			name = Coordinator;
 			packageProductDependencies = (
-				00E3CAE02EA0179F00B849C4 /* Factory */,
+				007C0CFE2EA6CAD200EF2C55 /* Authentication */,
+				007C0D012EA6CADB00EF2C55 /* Common */,
+				007C0D042EA6CAE200EF2C55 /* Home */,
+				007C0D072EA6CAEB00EF2C55 /* Profile */,
+				007C0D0A2EA6CAF700EF2C55 /* Settings */,
+				007C0D102EA6CB4D00EF2C55 /* Swinject */,
 			);
 			productName = Coordinator;
 			productReference = 00E3C9DE2EA0168B00B849C4 /* Coordinator.app */;
@@ -114,7 +147,12 @@
 			mainGroup = 00E3C9D52EA0168B00B849C4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				00E3CADF2EA0179F00B849C4 /* XCRemoteSwiftPackageReference "Factory" */,
+				007C0CFD2EA6CAD200EF2C55 /* XCLocalSwiftPackageReference "Packages/Authentication" */,
+				007C0D002EA6CADB00EF2C55 /* XCLocalSwiftPackageReference "Packages/Common" */,
+				007C0D032EA6CAE200EF2C55 /* XCLocalSwiftPackageReference "Packages/Home" */,
+				007C0D062EA6CAEB00EF2C55 /* XCLocalSwiftPackageReference "Packages/Profile" */,
+				007C0D092EA6CAF700EF2C55 /* XCLocalSwiftPackageReference "Packages/Settings" */,
+				007C0D0F2EA6CB4D00EF2C55 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 00E3C9DF2EA0168B00B849C4 /* Products */;
@@ -160,6 +198,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -190,6 +229,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -351,22 +391,65 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		007C0CFD2EA6CAD200EF2C55 /* XCLocalSwiftPackageReference "Packages/Authentication" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Authentication;
+		};
+		007C0D002EA6CADB00EF2C55 /* XCLocalSwiftPackageReference "Packages/Common" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Common;
+		};
+		007C0D032EA6CAE200EF2C55 /* XCLocalSwiftPackageReference "Packages/Home" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Home;
+		};
+		007C0D062EA6CAEB00EF2C55 /* XCLocalSwiftPackageReference "Packages/Profile" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Profile;
+		};
+		007C0D092EA6CAF700EF2C55 /* XCLocalSwiftPackageReference "Packages/Settings" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Settings;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
-		00E3CADF2EA0179F00B849C4 /* XCRemoteSwiftPackageReference "Factory" */ = {
+		007C0D0F2EA6CB4D00EF2C55 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Factory";
+			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.5.3;
+				minimumVersion = 2.10.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		00E3CAE02EA0179F00B849C4 /* Factory */ = {
+		007C0CFE2EA6CAD200EF2C55 /* Authentication */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 00E3CADF2EA0179F00B849C4 /* XCRemoteSwiftPackageReference "Factory" */;
-			productName = Factory;
+			productName = Authentication;
+		};
+		007C0D012EA6CADB00EF2C55 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
+		};
+		007C0D042EA6CAE200EF2C55 /* Home */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Home;
+		};
+		007C0D072EA6CAEB00EF2C55 /* Profile */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Profile;
+		};
+		007C0D0A2EA6CAF700EF2C55 /* Settings */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Settings;
+		};
+		007C0D102EA6CB4D00EF2C55 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 007C0D0F2EA6CB4D00EF2C55 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CleanCoordinatorApp
+//  Coordinator
 //
 
 import UIKit

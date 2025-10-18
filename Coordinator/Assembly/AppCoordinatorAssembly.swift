@@ -1,24 +1,20 @@
 //
 //  AppCoordinatorAssembly.swift
-//  MyCoordinatorPattern
+//  Coordinator
 //
 //  Root Coordinator Dependencies
 //
 
-import Foundation
-import Factory
+import Swinject
 
-extension Container {
-    
-    // MARK: - Root Coordinator Factory
-    var appCoordinatorFactory: Factory<AppCoordinatorFactoryProtocol> {
-        self {
-            AppCoordinatorFactory(
-                splashFactory: self.splashViewControllerFactory(),
-                authFactory: self.authCoordinatorFactory(),
-                homepageFactory: self.homepageCoordinatorFactory()
-            )
-        }
+final class AppCoordinatorAssembly: Assembly {
+    init() {}
+
+    func assemble(container: Container) {
+        registerAppCoordinatorFactory(in: container)
+    }
+
+    private func registerAppCoordinatorFactory(in container: Container) {
+        container.register(AppCoordinatorFactoryProtocol.self, factory: AppCoordinatorFactory.init)
     }
 }
-

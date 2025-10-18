@@ -1,22 +1,23 @@
 //
 //  SplashAssembly.swift
-//  MyCoordinatorPattern
-//
-//  Splash Screen Dependencies
+//  Coordinator
 //
 
 import Foundation
-import Factory
+import Swinject
 
-extension Container {
-    
-    // MARK: - Splash Interactor
-    var splashInteractor: Factory<SplashInteractorProtocol> {
-        self { SplashInteractor() }
+final class SplashAssembly: Assembly {
+    init() {}
+
+    func assemble(container: Container) {
+        registerSplash(in: container)
     }
-    
-    // MARK: - Splash ViewController Factory
-    var splashViewControllerFactory: Factory<SplashViewControllerFactoryProtocol> {
-        self { SplashViewControllerFactory(container: self) }
+
+    private func registerSplash(in container: Container) {
+        container.register(SplashViewControllerFactoryProtocol.self, factory: SplashViewControllerFactory.init)
+
+        container.register(SplashInteractorProtocol.self) { _ in
+            SplashInteractor()
+        }
     }
 }
