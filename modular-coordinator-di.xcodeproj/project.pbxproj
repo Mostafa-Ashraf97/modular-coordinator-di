@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001D96C92EAE791C00BF1093 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96BE2EAE791C00BF1093 /* SplashViewModel.swift */; };
+		001D96CA2EAE791C00BF1093 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96C52EAE791C00BF1093 /* SceneDelegate.swift */; };
+		001D96CB2EAE791C00BF1093 /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96B52EAE791C00BF1093 /* AppCoordinatorFactory.swift */; };
+		001D96CC2EAE791C00BF1093 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96C32EAE791C00BF1093 /* AppDelegate.swift */; };
+		001D96CD2EAE791C00BF1093 /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96B62EAE791C00BF1093 /* AppCoordinatorProtocol.swift */; };
+		001D96CE2EAE791C00BF1093 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96B42EAE791C00BF1093 /* AppCoordinator.swift */; };
+		001D96CF2EAE791C00BF1093 /* SplashCoordinatorActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96B82EAE791C00BF1093 /* SplashCoordinatorActions.swift */; };
+		001D96D02EAE791C00BF1093 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96BC2EAE791C00BF1093 /* SplashInteractor.swift */; };
+		001D96D12EAE791C00BF1093 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96B02EAE791C00BF1093 /* SplashAssembly.swift */; };
+		001D96D22EAE791C00BF1093 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96B22EAE791C00BF1093 /* NavigationRouter.swift */; };
+		001D96D32EAE791C00BF1093 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96C02EAE791C00BF1093 /* SplashView.swift */; };
+		001D96D42EAE791C00BF1093 /* AppCoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96AF2EAE791C00BF1093 /* AppCoordinatorAssembly.swift */; };
+		001D96D52EAE791C00BF1093 /* SplashViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001D96BA2EAE791C00BF1093 /* SplashViewControllerFactory.swift */; };
+		001D96D72EAE791C00BF1093 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001D96C72EAE791C00BF1093 /* Assets.xcassets */; };
 		007C0CFF2EA6CAD200EF2C55 /* Authentication in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0CFE2EA6CAD200EF2C55 /* Authentication */; };
 		007C0D022EA6CADB00EF2C55 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D012EA6CADB00EF2C55 /* Common */; };
 		007C0D052EA6CAE200EF2C55 /* Home in Frameworks */ = {isa = PBXBuildFile; productRef = 007C0D042EA6CAE200EF2C55 /* Home */; };
@@ -16,34 +30,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001D96AF2EAE791C00BF1093 /* AppCoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorAssembly.swift; sourceTree = "<group>"; };
+		001D96B02EAE791C00BF1093 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		001D96B22EAE791C00BF1093 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		001D96B42EAE791C00BF1093 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		001D96B52EAE791C00BF1093 /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
+		001D96B62EAE791C00BF1093 /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		001D96B82EAE791C00BF1093 /* SplashCoordinatorActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinatorActions.swift; sourceTree = "<group>"; };
+		001D96BA2EAE791C00BF1093 /* SplashViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerFactory.swift; sourceTree = "<group>"; };
+		001D96BC2EAE791C00BF1093 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
+		001D96BE2EAE791C00BF1093 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		001D96C02EAE791C00BF1093 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		001D96C32EAE791C00BF1093 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		001D96C42EAE791C00BF1093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		001D96C52EAE791C00BF1093 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		001D96C72EAE791C00BF1093 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		007C0CE42EA6CA9400EF2C55 /* Authentication */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Authentication; sourceTree = "<group>"; };
 		007C0CE52EA6CA9400EF2C55 /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
 		007C0CE62EA6CA9400EF2C55 /* Home */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Home; sourceTree = "<group>"; };
 		007C0CE72EA6CA9400EF2C55 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Profile; sourceTree = "<group>"; };
 		007C0CE82EA6CA9400EF2C55 /* Settings */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Settings; sourceTree = "<group>"; };
-		00E3C9DE2EA0168B00B849C4 /* Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E3C9DE2EA0168B00B849C4 /* modular-coordinator-di.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "modular-coordinator-di.app"; path = "/Users/a/Documents/Personal/Coordinator/Coordinator/build/Debug-iphoneos/modular-coordinator-di.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		00E3CAE62EA0200000B849C4 /* Exceptions for "Coordinator" folder in "Coordinator" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Supporting Files/Info.plist",
-			);
-			target = 00E3C9DD2EA0168B00B849C4 /* Coordinator */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		00E3C9E02EA0168B00B849C4 /* Coordinator */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				00E3CAE62EA0200000B849C4 /* Exceptions for "Coordinator" folder in "Coordinator" target */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		00E3C9DB2EA0168B00B849C4 /* Frameworks */ = {
@@ -62,6 +70,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001D96B12EAE791C00BF1093 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				001D96AF2EAE791C00BF1093 /* AppCoordinatorAssembly.swift */,
+				001D96B02EAE791C00BF1093 /* SplashAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		001D96B32EAE791C00BF1093 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				001D96B22EAE791C00BF1093 /* NavigationRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		001D96B72EAE791C00BF1093 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				001D96B32EAE791C00BF1093 /* Router */,
+				001D96B42EAE791C00BF1093 /* AppCoordinator.swift */,
+				001D96B52EAE791C00BF1093 /* AppCoordinatorFactory.swift */,
+				001D96B62EAE791C00BF1093 /* AppCoordinatorProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		001D96B92EAE791C00BF1093 /* CoordinatorActions */ = {
+			isa = PBXGroup;
+			children = (
+				001D96B82EAE791C00BF1093 /* SplashCoordinatorActions.swift */,
+			);
+			path = CoordinatorActions;
+			sourceTree = "<group>";
+		};
+		001D96BB2EAE791C00BF1093 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				001D96BA2EAE791C00BF1093 /* SplashViewControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		001D96BD2EAE791C00BF1093 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				001D96BC2EAE791C00BF1093 /* SplashInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		001D96BF2EAE791C00BF1093 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				001D96BE2EAE791C00BF1093 /* SplashViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		001D96C12EAE791C00BF1093 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				001D96C02EAE791C00BF1093 /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		001D96C22EAE791C00BF1093 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				001D96B92EAE791C00BF1093 /* CoordinatorActions */,
+				001D96BB2EAE791C00BF1093 /* Factories */,
+				001D96BD2EAE791C00BF1093 /* Interactors */,
+				001D96BF2EAE791C00BF1093 /* ViewModels */,
+				001D96C12EAE791C00BF1093 /* Views */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		001D96C62EAE791C00BF1093 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				001D96C32EAE791C00BF1093 /* AppDelegate.swift */,
+				001D96C42EAE791C00BF1093 /* Info.plist */,
+				001D96C52EAE791C00BF1093 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		001D96C82EAE791C00BF1093 /* modular-coordinator-di */ = {
+			isa = PBXGroup;
+			children = (
+				001D96B12EAE791C00BF1093 /* Assembly */,
+				001D96B72EAE791C00BF1093 /* Coordinator */,
+				001D96C22EAE791C00BF1093 /* Splash */,
+				001D96C62EAE791C00BF1093 /* Supporting Files */,
+				001D96C72EAE791C00BF1093 /* Assets.xcassets */,
+			);
+			path = "modular-coordinator-di";
+			sourceTree = "<group>";
+		};
 		007C0C392EA69EE500EF2C55 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,25 +188,16 @@
 			isa = PBXGroup;
 			children = (
 				007C0C392EA69EE500EF2C55 /* Packages */,
-				00E3C9E02EA0168B00B849C4 /* Coordinator */,
-				00E3C9DF2EA0168B00B849C4 /* Products */,
+				001D96C82EAE791C00BF1093 /* modular-coordinator-di */,
 			);
-			sourceTree = "<group>";
-		};
-		00E3C9DF2EA0168B00B849C4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				00E3C9DE2EA0168B00B849C4 /* Coordinator.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E3C9DD2EA0168B00B849C4 /* Coordinator */ = {
+		00E3C9DD2EA0168B00B849C4 /* modular-coordinator-di */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E3C9F12EA0168C00B849C4 /* Build configuration list for PBXNativeTarget "Coordinator" */;
+			buildConfigurationList = 00E3C9F12EA0168C00B849C4 /* Build configuration list for PBXNativeTarget "modular-coordinator-di" */;
 			buildPhases = (
 				00E3C9DA2EA0168B00B849C4 /* Sources */,
 				00E3C9DB2EA0168B00B849C4 /* Frameworks */,
@@ -106,10 +207,7 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				00E3C9E02EA0168B00B849C4 /* Coordinator */,
-			);
-			name = Coordinator;
+			name = "modular-coordinator-di";
 			packageProductDependencies = (
 				007C0CFE2EA6CAD200EF2C55 /* Authentication */,
 				007C0D012EA6CADB00EF2C55 /* Common */,
@@ -119,7 +217,7 @@
 				007C0D102EA6CB4D00EF2C55 /* Swinject */,
 			);
 			productName = Coordinator;
-			productReference = 00E3C9DE2EA0168B00B849C4 /* Coordinator.app */;
+			productReference = 00E3C9DE2EA0168B00B849C4 /* modular-coordinator-di.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 00E3C9D92EA0168B00B849C4 /* Build configuration list for PBXProject "Coordinator" */;
+			buildConfigurationList = 00E3C9D92EA0168B00B849C4 /* Build configuration list for PBXProject "modular-coordinator-di" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -155,11 +253,11 @@
 				007C0D0F2EA6CB4D00EF2C55 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 00E3C9DF2EA0168B00B849C4 /* Products */;
+			productRefGroup = 00E3C9D52EA0168B00B849C4;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				00E3C9DD2EA0168B00B849C4 /* Coordinator */,
+				00E3C9DD2EA0168B00B849C4 /* modular-coordinator-di */,
 			);
 		};
 /* End PBXProject section */
@@ -169,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001D96D72EAE791C00BF1093 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +278,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001D96C92EAE791C00BF1093 /* SplashViewModel.swift in Sources */,
+				001D96CA2EAE791C00BF1093 /* SceneDelegate.swift in Sources */,
+				001D96CB2EAE791C00BF1093 /* AppCoordinatorFactory.swift in Sources */,
+				001D96CC2EAE791C00BF1093 /* AppDelegate.swift in Sources */,
+				001D96CD2EAE791C00BF1093 /* AppCoordinatorProtocol.swift in Sources */,
+				001D96CE2EAE791C00BF1093 /* AppCoordinator.swift in Sources */,
+				001D96CF2EAE791C00BF1093 /* SplashCoordinatorActions.swift in Sources */,
+				001D96D02EAE791C00BF1093 /* SplashInteractor.swift in Sources */,
+				001D96D12EAE791C00BF1093 /* SplashAssembly.swift in Sources */,
+				001D96D22EAE791C00BF1093 /* NavigationRouter.swift in Sources */,
+				001D96D32EAE791C00BF1093 /* SplashView.swift in Sources */,
+				001D96D42EAE791C00BF1093 /* AppCoordinatorAssembly.swift in Sources */,
+				001D96D52EAE791C00BF1093 /* SplashViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +306,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SPHY5BA8B7;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Coordinator/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "modular-coordinator-di/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -225,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SPHY5BA8B7;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = "Coordinator/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "modular-coordinator-di/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -371,7 +483,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E3C9D92EA0168B00B849C4 /* Build configuration list for PBXProject "Coordinator" */ = {
+		00E3C9D92EA0168B00B849C4 /* Build configuration list for PBXProject "modular-coordinator-di" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E3C9F42EA0168C00B849C4 /* Debug */,
@@ -380,7 +492,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		00E3C9F12EA0168C00B849C4 /* Build configuration list for PBXNativeTarget "Coordinator" */ = {
+		00E3C9F12EA0168C00B849C4 /* Build configuration list for PBXNativeTarget "modular-coordinator-di" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E3C9F22EA0168C00B849C4 /* Debug */,
